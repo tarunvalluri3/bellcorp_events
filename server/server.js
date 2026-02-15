@@ -13,6 +13,8 @@ app.use(express.json());
 
 /* routes */
 app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/events", require("./routes/eventRoutes"));
+app.use("/api/registrations", require("./routes/registrationRoutes"));
 
 /* health */
 app.get("/", (req, res) => {
