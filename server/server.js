@@ -8,7 +8,14 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://bellcorp-events.vercel.app"
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 /* routes */
